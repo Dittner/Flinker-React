@@ -1,0 +1,78 @@
+{
+  "name": "flinker-react",
+  "description": "RXObserver as app state manager for react apps",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dittner/Flinker.git"
+  },
+  "keywords": [
+    "RXObserver.ts",
+    "React",
+    "App state manager"
+  ],
+  "author": "Alexander Dittner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dittner/Flinker/issues"
+  },
+  "homepage": "https://github.com/Dittner/Flinker",
+  "private": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "index.ts",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "demo": "PORT=3001 PUBLIC_URL=/ react-scripts start",
+    "test": "jest",
+    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "flinker": "^2.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.13",
+    "@types/vscode": "^1.98.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.3.0",
+    "typescript": "^5.8.2",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "peerDependencies": {}
+}

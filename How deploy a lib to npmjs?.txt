@@ -1,0 +1,15 @@
+How deploy a lib to https://docs.npmjs.com
+
+0. Before creating new package check: package-name does not exist in the npm store
+1. Run a build
+$ npm run build
+
+2. Create file in Users/<user name>/.npmrc
+
+3. Get Token in your account in from npmjs.com
+
+4. npmrc-file must have one row string with your tiken:
+//registry.npmjs.org/:_authToken=npm_4oy9NLMQFfgRNJL77MhE8CM3vdfBjZX2Z5O7MX
+
+3. publish build
+$ npm publish --access public
