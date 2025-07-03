@@ -1,10 +1,10 @@
 {
   "name": "flinker-react",
   "description": "RXObserver as app state manager for react apps",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dittner/Flinker.git"
+    "url": "git+https://github.com/Dittner/Flinker-React.git"
   },
   "keywords": [
     "RXObserver.ts",
@@ -16,11 +16,10 @@
   "bugs": {
     "url": "https://github.com/Dittner/Flinker/issues"
   },
-  "homepage": "https://github.com/Dittner/Flinker",
+  "homepage": "https://github.com/Dittner/Flinker-React",
   "private": false,
-  "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist/",
     "index.ts",
@@ -30,9 +29,8 @@
   "scripts": {
     "demo": "PORT=3001 PUBLIC_URL=/ react-scripts start",
     "test": "jest",
-    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm",
-    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs"
+    "build": "rm -rf dist && npm run build:esm",
+    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm"
   },
   "eslintConfig": {
     "extends": [
@@ -53,7 +51,7 @@
     ]
   },
   "dependencies": {
-    "flinker": "^2.0.0"
+    "flinker": "^2.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
